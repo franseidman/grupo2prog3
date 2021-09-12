@@ -27,8 +27,8 @@ export default class Pelicula extends Component {
     render() {
         return (
             <div className = 'container'>
-                <main>
-                    <img src={this.props.photo} alt=""/>
+                <main className = "Tarjeta">
+                    <img src={this.props.photo} alt="txt predeterminado"/>
                     <h3>{this.props.name}</h3>
                     <p class="description">{this.props.descripcion}</p>
                     <p className= "more" onClick={() => this.handleShow()}>{this.state.mensaje}</p>

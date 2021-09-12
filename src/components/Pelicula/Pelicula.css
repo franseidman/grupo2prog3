@@ -7,3 +7,14 @@
 .show{
     display: block;
 }
+.container{
+    margin-bottom: 10px;
+}
+.Tarjeta{
+    background-color: rgb(196, 196, 196);
+    border-radius: 20px;
+    border-color: rgb(189, 189, 189);
+    border-width: 2px;
+    width: 90%;
+    margin: auto;
+}
