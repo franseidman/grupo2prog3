@@ -52,7 +52,10 @@ export default class ContainerPeliculas extends Component {
                     this.state.filteredPeliculas.map((pelicula, index) => {
                         return <Pelicula key={index}
                         name={pelicula.title}
-                        photo={pelicula.image}
+                        photo={pelicula.poster_path}
+                        descripcion={pelicula.overview}
+                        rating={pelicula.vote_average}
+                        date={pelicula.release_date}
                         //removerPelicula = {(name)=>this.removerPelicula(name)}
                         />
                     })

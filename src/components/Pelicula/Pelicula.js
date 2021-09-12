@@ -1,9 +1,26 @@
 import React, { Component } from 'react';
+import './Pelicula.css';
 
 export default class Pelicula extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            clase: 'hide',
+            mensaje: 'ver más'
+        }
+    }
+
+    handleShow(){
+        if (this.state.clase === 'hide'){
+            this.setState({
+                clase: 'show',
+                mensaje: "ver menos"
+            })
+            } else {
+            this.setState({
+                clase: 'hide',
+                mensaje: "ver mas"
+            })   
         }
     }
 
@@ -11,17 +28,14 @@ export default class Pelicula extends Component {
         return (
             <div className = 'container'>
                 <main>
-                    <img src="./img/image-default.png" alt=""/>
-                    <h3>Título/ Nombre</h3>
-                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint cumque velit minus facere
-                        laboriosam voluptatem impedit ea unde labore optio eius quis, dignissimos expedita. Culpa, soluta
-                        perspiciatis! Sint, laboriosam cum.</p>
+                    <img src={this.props.photo} alt=""/>
+                    <h3>{this.props.name}</h3>
+                    <p class="description">{this.props.descripcion}</p>
+                    <p className= "more" onClick={() => this.handleShow()}>{this.state.mensaje}</p>
                     <section class="aditional-info">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui atque.</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui atque.</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui atque.</p>
+                        <p className= {this.state.clase}>Rating: {this.props.rating}</p>
+                        <p className= {this.state.clase}>Release Date: {this.props.date}</p>
                     </section>
-                    <a href="www.google.com">Ver más</a>
                 </main>
             </div>
         )
