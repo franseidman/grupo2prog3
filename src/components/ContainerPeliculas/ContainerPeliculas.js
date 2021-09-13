@@ -82,11 +82,27 @@ export default class ContainerPeliculas extends Component {
             .catch(error => console.log(error));
     }
 
+    CambiarOrientacion(){
+        if (this.state.clase === 'grid'){
+            this.setState({
+                clase: 'bars',
+            })
+            } else {
+            this.setState({
+                clase: 'bars',
+            })   
+        }
+    }
+
+
+
     render() {
         return (
-            <div className = 'container'>
+            <div className = 'container22'>
                 <FiltroPorTitulo filtrarPorTitulo={(tituloAFiltrar)=>this.filtrarPorTitulo(tituloAFiltrar)} />
                 <button onClick={()=>this.addCards()}>Agregar Mas</button>
+                <div className="orientacion" onClick={() => this.CambiarOrientacion()}> ORIENTACIONN <img src="./public/images/bars-solid.svg" alt="VER COMO ARMAR RUTA A ARCHIVO ICON" /></div>
+                <div className = 'container'>
                 {this.state.peliculas === [] ?
                     < h4 > Cargando ... </h4>:
                     this.state.filteredPeliculas.map((pelicula, index) => {
@@ -100,6 +116,7 @@ export default class ContainerPeliculas extends Component {
                         />
                     })
                 }
+                </div>
             </div>
         )
     }

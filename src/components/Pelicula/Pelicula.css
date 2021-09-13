@@ -8,13 +8,51 @@
     display: block;
 }
 .container{
-    margin-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    align-items: flex-start;
+}
+.container22{
+    margin-bottom: 20px;
+}
+.container2{
+    margin-top: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 .Tarjeta{
     background-color: rgb(196, 196, 196);
     border-radius: 20px;
     border-color: rgb(189, 189, 189);
     border-width: 2px;
-    width: 90%;
-    margin: auto;
+    width: 400px;
+}
+.FotoFlex{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.movieimg{
+    width: 80%;
+    margin-top: 20px;
+}
+.Name{
+    text-align: center;
+}
+.more{
+    text-align: center;
+}
+.Eliminar{
+    width: 100%;
+    background-color: transparent;
+    border-color: transparent;
+}
+.Eliminar:hover{
+    width: 100%;
+    border-radius: 200px;
+    background-color: red;
+    border-color: transparent;
 }
