@@ -82,7 +82,7 @@ export default class ContainerPeliculas extends Component {
             .catch(error => console.log(error));
     }
 
-    CambiarOrientacion(){
+    CambiarOrientacionALista(){
         if (this.state.clase === 'grid'){
             this.setState({
                 clase: 'bars',
@@ -101,7 +101,7 @@ export default class ContainerPeliculas extends Component {
             <div className = 'container22'>
                 <FiltroPorTitulo filtrarPorTitulo={(tituloAFiltrar)=>this.filtrarPorTitulo(tituloAFiltrar)} />
                 <button onClick={()=>this.addCards()}>Agregar Mas</button>
-                <div className="orientacion" onClick={() => this.CambiarOrientacion()}> ORIENTACIONN <img src="./public/images/bars-solid.svg" alt="VER COMO ARMAR RUTA A ARCHIVO ICON" /></div>
+                <div className="orientacion" onClick={() => this.CambiarOrientacionALista()}> ORIENTACIONN <img src="images/bars-solid.svg" alt="VER COMO ARMAR RUTA A ARCHIVO ICON" /></div>
                 <div className = 'container'>
                 {this.state.peliculas === [] ?
                     < h4 > Cargando ... </h4>:
