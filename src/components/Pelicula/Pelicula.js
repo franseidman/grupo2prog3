@@ -36,6 +36,7 @@ export default class Pelicula extends Component {
                         <p className= {this.state.clase}>Rating: {this.props.rating}</p>
                         <p className= {this.state.clase}>Release Date: {this.props.date}</p>
                     </section>
+                    <button onClick={()=> this.props.removerPelicula(this.props.name)}> Eliminar pelicula</button>
                 </main>
             </div>
         )

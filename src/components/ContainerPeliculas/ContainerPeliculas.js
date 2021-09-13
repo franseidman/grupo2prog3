@@ -28,6 +28,26 @@ export default class ContainerPeliculas extends Component {
             .catch(error => console.log(error));
     }
 
+    removerPelicula(name){
+        //Obtengo el nombre del personaje que quiero eliminar mi array
+
+        console.log(name);
+
+        //Permanecen en mi array "personajesFiltrados" aquellos personajes que NO tengan el nombre a filtrar
+        // !== significa distinto
+
+        const peliculasFiltradas = this.state.peliculas.filter(pelicula => pelicula.title !== name)
+
+        console.log(peliculasFiltradas);
+
+        //Ultimo paso es setear el estado
+        this.setState({
+            peliculas: peliculasFiltradas,
+            filteredPeliculas: peliculasFiltradas
+        })
+    }
+
+
     filtrarPorTitulo(tituloAFiltrar){
         console.log(tituloAFiltrar);
         const arrayFiltrada = this.state.peliculas.filter(
@@ -76,7 +96,7 @@ export default class ContainerPeliculas extends Component {
                         descripcion={pelicula.overview}
                         rating={pelicula.vote_average}
                         date={pelicula.release_date}
-                        //removerPelicula = {(name)=>this.removerPelicula(name)}
+                        removerPelicula = {(name)=>this.removerPelicula(name)}
                         />
                     })
                 }
