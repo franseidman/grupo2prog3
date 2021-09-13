@@ -30,9 +30,9 @@ export default class Pelicula extends Component {
                 <main className = "Tarjeta">
                     <img src={this.props.photo} alt="txt predeterminado"/>
                     <h3>{this.props.name}</h3>
-                    <p class="description">{this.props.descripcion}</p>
                     <p className= "more" onClick={() => this.handleShow()}>{this.state.mensaje}</p>
                     <section class="aditional-info">
+                        <p className= {this.state.clase}>{this.props.descripcion}</p>
                         <p className= {this.state.clase}>Rating: {this.props.rating}</p>
                         <p className= {this.state.clase}>Release Date: {this.props.date}</p>
                     </section>
