@@ -29,6 +29,15 @@
     border-width: 2px;
     width: 400px;
 }
+.lista{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    background-color: rgb(196, 196, 196);
+    border-radius: 20px;
+    border-color: rgb(189, 189, 189);
+    border-width: 2px;
+    width: 1200px;
+}
 .FotoFlex{
     display: flex;
     flex-wrap: wrap;

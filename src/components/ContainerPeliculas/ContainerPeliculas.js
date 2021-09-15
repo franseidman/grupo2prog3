@@ -8,7 +8,8 @@ export default class ContainerPeliculas extends Component {
         this.state = {
             peliculas: [],
             filteredPeliculas: [],
-            page: 2
+            page: 2,
+            clase: 'Tarjeta'
         }
     }
 
@@ -83,13 +84,25 @@ export default class ContainerPeliculas extends Component {
     }
 
     CambiarOrientacionALista(){
-        if (this.state.clase === 'grid'){
+        if (this.state.clase === 'Tarjeta'){
             this.setState({
-                clase: 'bars',
+                clase: 'lista',
             })
             } else {
             this.setState({
-                clase: 'bars',
+                clase: 'lista',
+            })   
+        }
+    }
+
+    CambiarOrientacionAGrid(){
+        if (this.state.clase === 'lista'){
+            this.setState({
+                clase: 'Tarjeta',
+            })
+            } else {
+            this.setState({
+                clase: 'Tarjeta',
             })   
         }
     }
@@ -101,7 +114,8 @@ export default class ContainerPeliculas extends Component {
             <div className = 'container22'>
                 <FiltroPorTitulo filtrarPorTitulo={(tituloAFiltrar)=>this.filtrarPorTitulo(tituloAFiltrar)} />
                 <button onClick={()=>this.addCards()}>Agregar Mas</button>
-                <div className="orientacion" onClick={() => this.CambiarOrientacionALista()}> ORIENTACIONN <img src="images/bars-solid.svg" alt="VER COMO ARMAR RUTA A ARCHIVO ICON" /></div>
+                <div className="orientacion" onClick={() => this.CambiarOrientacionALista()}> <img width= '50' src="images/bars-solid.svg" alt="icon" /></div>
+                <div className="orientacion" onClick={() => this.CambiarOrientacionAGrid()}> <img width= '50' src="images/th-solid.svg" alt="icon" /></div>
                 <div className = 'container'>
                 {this.state.peliculas === [] ?
                     < h4 > Cargando ... </h4>:
@@ -113,10 +127,12 @@ export default class ContainerPeliculas extends Component {
                         rating={pelicula.vote_average}
                         date={pelicula.release_date}
                         removerPelicula = {(name)=>this.removerPelicula(name)}
+                        clase = {this.state.clase}
                         />
                     })
                 }
                 </div>
+                <button onClick={()=>this.addCards()}>Agregar Mas</button>
             </div>
         )
     }
