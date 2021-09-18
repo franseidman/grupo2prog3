@@ -27,9 +27,9 @@ export default class FiltroPorTitulo extends Component {
 
     render(){
         return(
-            <form onSubmit={(evento)=> this.prevenirSubmit(evento)}>
-                <label>Name: </label>
-                <input onChange={(evento)=> this.capturaInput(evento) } type="text"/>
+            <form className="Search" onSubmit={(evento)=> this.prevenirSubmit(evento)}>
+                <label className="name">Name: </label>
+                <input className="inputbusqueda" onChange={(evento)=> this.capturaInput(evento) } type="text"/>
             </form>
         )
     }
