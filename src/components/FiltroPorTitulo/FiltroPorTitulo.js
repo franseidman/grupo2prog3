@@ -28,11 +28,14 @@ export default class FiltroPorTitulo extends Component {
 
     render(){
         return(
+            <div className='grid'>
             <form className="Search" onSubmit={(evento)=> this.prevenirSubmit(evento)}>
                 {/*<img width= '20' src="images/lupa2.png" alt="lupa" className="name"/>*/}
-                <label className="name">Pelicula: </label>
-                <input className="inputbusqueda" onChange={(evento)=> this.capturaInput(evento) } type="text"/>
+                {/*<label className="name">Pelicula: </label>*/}
+                <input placeholder='Buscar películas' className="inputbusqueda" onChange={(evento)=> this.capturaInput(evento) } type="text"/>
             </form>
+                <img width= '20' src="images/icons8-search.svg" alt="icon" className='lupita'/>
+             </div>
         )
     }
 }
