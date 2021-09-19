@@ -9,18 +9,20 @@
     grid-template-columns: 1fr 1fr;
 }
 .addcards{
-    margin-left: 2%;
-    margin-top: 1%;
-    border-color: transparent;
-    border-radius: 5px;
-    background-color: rgba(155, 170, 169, 0.281);
+    margin-left: 47%;
+    margin-top: 2%;
+    border-color: rgba(170, 170, 170, 0.178);
+    border-radius: 10px;
+    border-width: 1px;
+    background-color: transparent;
 }
 .addcards:hover{
-    margin-left: 2%;
-    margin-top: 1%;
-    border-color: transparent;
-    border-radius: 5px;
-    background-color: rgba(155, 170, 169, 0.507);
+    margin-left: 47%;
+    margin-top: 2%;
+    border-color: rgba(170, 170, 170, 0.349);
+    border-radius: 10px;
+    border-width: 1px;
+    background-color: rgba(170, 170, 170, 0.178);
 }
 .icon{
     opacity: 60%;

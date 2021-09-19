@@ -114,7 +114,7 @@ export default class ContainerPeliculas extends Component {
         return (
             <div className = 'container22'>
                 <FiltroPorTitulo filtrarPorTitulo={(tituloAFiltrar)=>this.filtrarPorTitulo(tituloAFiltrar)} />
-                <button className="addcards" onClick={()=>this.addCards()}>Agregar Mas</button>
+                <button className="addcards" onClick={()=>this.addCards()}>Cargar Más</button>
                 <div className="BotonesOrientacion">
                 <div className="orientacionList" onClick={() => this.CambiarOrientacionALista()}> <img width= '18' src="images/bars-solid.svg" alt="icon" className="icon" /></div>
                 <div className="orientacionGrid" onClick={() => this.CambiarOrientacionAGrid()}> <img width= '20' src="images/th-solid.svg" alt="icon" className="icon" /></div>

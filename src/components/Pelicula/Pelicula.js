@@ -43,7 +43,7 @@ export default class Pelicula extends Component {
                         </section>
                         </div>
                         
-                        <button className="Eliminar" onClick={()=> this.props.removerPelicula(this.props.name)}> Eliminar pelicula</button>
+                        <button className="Eliminar" onClick={()=> this.props.removerPelicula(this.props.name)}>Quitar</button>
                     </main>
                     </div>
                 </div>
