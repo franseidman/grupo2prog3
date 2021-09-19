@@ -1,0 +1,14 @@
+.Search{
+    background-color: rgb(190, 190, 190);
+    width: 20%;
+    height: 25px;
+    border-radius: 10px;
+    margin-left: 2%;
+}
+.name{
+    margin-left: 5%;
+}
+.inputbusqueda{
+    border-color: transparent;
+    border-radius: 5px;
+}

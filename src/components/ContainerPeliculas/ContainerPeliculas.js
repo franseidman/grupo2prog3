@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Pelicula from '../Pelicula/Pelicula';
 import FiltroPorTitulo from '../FiltroPorTitulo/FiltroPorTitulo'
+import './ContainerPeliculas.css';
 
 export default class ContainerPeliculas extends Component {
     constructor(props) {
@@ -134,7 +135,7 @@ export default class ContainerPeliculas extends Component {
                     })
                 }
                 </div>
-                <button onClick={()=>this.addCards()}>Agregar Mas</button>
+                {/*<button onClick={()=>this.addCards()}>Agregar Mas</button>*/}
             </div>
         )
     }

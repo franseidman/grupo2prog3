@@ -26,16 +26,6 @@
 .show{
     display: block;
 }
-.container{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    align-items: flex-start;
-}
-.container22{
-    margin-bottom: 20px;
-}
 .container2{
     margin-top: 18px;
     padding-left: 15px;
@@ -91,41 +81,4 @@
     background-color: red;
     border-color: transparent;
 }
-.BotonesOrientacion{
-    margin-left: 90%;
-    width: 4%;
-    justify-content: right;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-.icon{
-    opacity: 60%;
-}
-.Search{
-    background-color: rgb(190, 190, 190);
-    width: 20%;
-    height: 25px;
-    border-radius: 10px;
-    margin-left: 2%;
-}
-.name{
-    margin-left: 5%;
-}
-.inputbusqueda{
-    border-color: transparent;
-    border-radius: 5px;
-}
-.addcards{
-    margin-left: 2%;
-    margin-top: 1%;
-    border-color: transparent;
-    border-radius: 5px;
-    background-color: rgba(155, 170, 169, 0.281);
-}
-.addcards:hover{
-    margin-left: 2%;
-    margin-top: 1%;
-    border-color: transparent;
-    border-radius: 5px;
-    background-color: rgba(155, 170, 169, 0.507);
-}
+

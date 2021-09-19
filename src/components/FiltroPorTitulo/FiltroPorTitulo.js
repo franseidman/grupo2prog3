@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './FiltroPorTitulo.css';
 
 export default class FiltroPorTitulo extends Component {
     constructor (){
@@ -28,7 +29,8 @@ export default class FiltroPorTitulo extends Component {
     render(){
         return(
             <form className="Search" onSubmit={(evento)=> this.prevenirSubmit(evento)}>
-                <label className="name">Name: </label>
+                {/*<img width= '20' src="images/lupa2.png" alt="lupa" className="name"/>*/}
+                <label className="name">Pelicula: </label>
                 <input className="inputbusqueda" onChange={(evento)=> this.capturaInput(evento) } type="text"/>
             </form>
         )

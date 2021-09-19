@@ -1,14 +1,14 @@
 import React from "react";
+import './Footer.css';
 
 
 function Footer(){
     return(
         <footer>
-            <ul class="team">
-                <li>Nombre integrante 1</li>
-                <li>Nombre integrante 2</li>
-                <li>Nombre integrante 3</li>
-            </ul>
+                <div className="nombres footer">
+                    <div id="name" className="aa">Mateo Pautasso Cavanagh - Francisco Manuel Seidman - Lucas Ruiz Coines</div>
+                    <div id="name" className="aa">Copyright © 2021 SoundWaves⁺. All rights reserved.</div>
+                </div>
         </footer>
     )
 }
