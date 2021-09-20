@@ -31,18 +31,9 @@ export default class ContainerPeliculas extends Component {
     }
 
     removerPelicula(name){
-        //Obtengo el nombre del personaje que quiero eliminar mi array
-
         console.log(name);
-
-        //Permanecen en mi array "personajesFiltrados" aquellos personajes que NO tengan el nombre a filtrar
-        // !== significa distinto
-
         const peliculasFiltradas = this.state.peliculas.filter(pelicula => pelicula.title !== name)
-
         console.log(peliculasFiltradas);
-
-        //Ultimo paso es setear el estado
         this.setState({
             peliculas: peliculasFiltradas,
             filteredPeliculas: peliculasFiltradas

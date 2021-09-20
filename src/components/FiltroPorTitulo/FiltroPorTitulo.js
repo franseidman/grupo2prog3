@@ -4,7 +4,6 @@ import './FiltroPorTitulo.css';
 export default class FiltroPorTitulo extends Component {
     constructor (){
         super();
-        //Valor inicial del estado
         this.state = {
             valorInput: ""
         }
@@ -20,8 +19,6 @@ export default class FiltroPorTitulo extends Component {
         this.setState({
             valorInput: evento.target.value 
         },
-        //Funcion callback que se ejecuta inmediatamente después de
-        //actualizar el estado.
         () => this.props.filtrarPorTitulo(this.state.valorInput)
         )
     }
