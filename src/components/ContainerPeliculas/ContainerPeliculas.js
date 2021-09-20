@@ -16,13 +16,13 @@ export default class ContainerPeliculas extends Component {
 
     componentDidMount() {
         fetch('https://api.themoviedb.org/3/movie/top_rated?api_key=744aeafc438e3c43559433a4ec05ce25')
-            .then(response => { return response.json() }) //transformamos la respuesta en un objeto json con el que podemos trabajar
+            .then(response => { return response.json() })
             .then(data => {
                 console.log(data)
 
                 this.setState({
-                    peliculas: data.results, //no va a cambiar
-                    filteredPeliculas: data.results //va variando de acuerdo al input
+                    peliculas: data.results,
+                    filteredPeliculas: data.results 
                 })
 
                 console.log(data.results);
@@ -59,7 +59,7 @@ export default class ContainerPeliculas extends Component {
 
     addCards(){
         fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=744aeafc438e3c43559433a4ec05ce25&page=${this.state.page}`)
-            .then(response => { return response.json() }) //transformamos la respuesta en un objeto json con el que podemos trabajar
+            .then(response => { return response.json() })
             .then(data => {
                 let arrayPrevio = this.state.peliculas;
                 let arrayActualizado = arrayPrevio.concat(data.results);
@@ -126,7 +126,6 @@ export default class ContainerPeliculas extends Component {
                     })
                 }
                 </div>
-                {/*<button onClick={()=>this.addCards()}>Agregar Mas</button>*/}
             </div>
         )
     }
